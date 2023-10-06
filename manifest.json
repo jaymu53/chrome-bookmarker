@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "WhisperNotes - Transcribe and organize your audio notes",
+  "version": "1.0.4",
+  "description": "Transcribe audio notes to text and organize, search and more",
+"icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+	  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/index-b15a1a90.js"
+      ],
+      
+	 "css": [
+        "content/styling.css"
+      
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+"permissions": [
+   "scripting",  "storage", "tabs", "activeTab"
+],
+   "action": {
+        "default_popup": "pages/popup/index.html",
+        "default_icon": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+"web_accessible_resources": [
+{
+  "resources": ["chunks/index-1767ce8b.js"],
+
+  "matches": ["<all_urls>"]
+},
+{
+  "resources": ["content/index.js"],
+  "matches": ["<all_urls>"]
+}
+  ]
+}
